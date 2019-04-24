@@ -1,0 +1,59 @@
+.float-wrap-M {
+  --font-size: 20px;
+
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  display: none;
+
+  margin: 0;
+  padding: 0;
+}
+
+.modal {
+  background-color: rgba(0, 0, 0, 0.1);
+  pointer-events: auto;
+}
+
+.modal-msg {
+  padding: 12px 24px 12px 0;
+  background: #ffffff;
+  border: 3px solid #61dafb;
+  color: #555;
+}
+
+.viewport {
+  position: fixed;
+}
+
+.modal-msg > * {
+  vertical-align: middle;
+}
+
+.show {
+  display: flex;
+}
+
+.float-wrap-M > h1 {
+  height: 200px;
+  width: 500px;
+  text-align: center;
+  line-height: 200px;
+  background: white;
+  border: 3px solid darkgrey;
+}
+
+.float-wrap-M > img {
+  position: relative;
+  height: 25px;
+  width: 25px;
+  right: 35px;
+  bottom: -78px;
+}
