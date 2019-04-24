@@ -1,0 +1,188 @@
+* {
+  --container-height: 640px;
+  --controlButtonHeight: 36px;
+  --controlPanelTitleHeight: 36px;
+}
+
+#controlPanel {
+  --controlButtonWidth: 160px;
+}
+
+#helperPanel {
+  --helperButtonWidth: 200px;
+}
+
+.controlPanel {
+  height: var(--container-height);
+  min-height: var(--container-height);
+
+  display: flex;
+  flex-flow: column;
+
+  padding: 5px 0;
+
+  color: white;
+  border: 1px solid darkgray;
+  background: slategray;
+}
+
+.controlPanel > h2 {
+  height: var(--controlPanelTitleHeight);
+  line-height: var(--controlPanelTitleHeight);
+  text-align: bottom;
+  padding-bottom: 3px;
+}
+
+#controlPanel .controlButton {
+  width: var(--controlButtonWidth);
+}
+
+#helperPanel .controlButton {
+  width: var(--helperButtonWidth);
+}
+
+.controlButton {
+  height: var(--controlButtonHeight);
+  min-height: var(--controlButtonHeight);
+
+  color: black;
+  background: white;
+  border: 2px solid #333;
+  margin: 4px 5px;
+  padding: 5px 10px;
+
+  font-size: 18px;
+
+  cursor: pointer;
+}
+
+.controlButton:disabled,
+.inaccessible,
+.inaccessible h3 {
+  color: #999;
+  border-color: #999;
+}
+
+#helperPanel .active,
+#controlPanel .active {
+  background: lightpink;
+}
+
+#helperPanel .waiting {
+  background: PaleTurquoise;
+}
+
+#multipleNums,
+#singleNumWrapper {
+  padding: 3px 5px;
+  border-color: black;
+  border-width: 1px 0;
+  border-style: solid;
+}
+
+.controlButtonWrapper {
+  height: auto;
+  padding: 0;
+}
+
+.controlButtonWrapper h3 {
+  width: 100%;
+  height: var(--controlButtonHeight);
+  line-height: var(--controlButtonHeight);
+  vertical-align: middle;
+  text-align: middle;
+
+  font-size: 18px;
+  font-weight: normal;
+  padding: 0;
+  border-bottom: 1px solid #333;
+}
+
+.radioWrapper {
+  height: auto;
+  display: flex;
+  align-content: stretch;
+  padding: 0 5px;
+}
+
+.checkBoxWrapper {
+  height: auto;
+  display: flex;
+  align-content: stretch;
+  padding: 0 5px;
+}
+
+.candidateButtonWrapper {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 5px;
+  padding: 5px 5px;
+}
+
+#checkWrapper,
+#helpModeWrapper {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+#checkWrapper .sampleGameButton,
+#helpModeWrapper .sampleGameButton {
+  width: 100%;
+  height: 30px;
+  font-size: 14px;
+  margin: 0;
+}
+
+#multipleNums label,
+#singleNumWrapper label,
+#candidateWrapper label {
+  width: 100%;
+  padding: 3px 0;
+}
+
+#multipleNums .allDone,
+#singleNumWrapper .allDone {
+  background: gray;
+}
+
+#multipleNums .exceeding,
+#singleNumWrapper .exceeding {
+  background: red;
+}
+
+#controlLabelSkipIneffective {
+  display: inline-block;
+  width: 100%;
+  height: 44px;
+  text-align: left;
+  padding: 3px 5px 3px 5px;
+  font-size: 13px;
+}
+
+#controlLabelSkipIneffective > input {
+  margin-right: 5px;
+}
+
+.sampleGameWrapper {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 5px;
+  padding: 5px 5px;
+}
+
+.sampleGameInnerWrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 5px;
+  align-content: start;
+}
+
+.sampleGameButton {
+  width: 100%;
+  height: 25px;
+  font-size: 15px;
+  margin: 0;
+}

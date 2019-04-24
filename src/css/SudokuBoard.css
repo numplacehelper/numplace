@@ -1,0 +1,155 @@
+#sudokuBoard {
+  --container-width: 640px;
+  --container-height: var(--container-width);
+
+  --container-padding: 10px;
+  --block-gap: 15px;
+
+  --block-width: calc(
+    (
+        var(--container-width) - var(--container-padding) * 2 - var(--block-gap) *
+          2
+      ) / 3
+  );
+  --block-height: var(--block-width);
+
+  --cell-gap: 2px;
+  --cell_border_thickness: 1px;
+
+  --cell-width: calc((var(--block-width) - var(--cell-gap) * 3) / 10 * 3);
+  --cell-height: calc((var(--block-height) - var(--cell-gap) * 3) / 10 * 3);
+  --cell-inHeight: calc(var(--cell-height) - var(--cell_border_thickness) * 2);
+
+  --board-background: MidnightBlue;
+
+  box-sizing: border-box;
+  width: var(--container-width);
+  min-width: var(--container-width);
+  height: var(--container-height);
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: var(--block-gap);
+
+  padding: var(--container-padding);
+
+  border: 1px solid darkgray;
+  background: var(--board-background);
+}
+
+.blockWrapper {
+  --testNumPanelCell-gap: 4px;
+  --markCell-gap: 3px;
+
+  display: grid;
+  grid-template-columns: 1fr 9fr;
+  grid-template-rows: 9fr 1fr;
+
+  grid-gap: var(--block-gap);
+
+  padding: 0;
+  margin: 0;
+}
+
+#sudokuBoard .block {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: var(--cell-gap);
+
+  padding: 0;
+  margin: 0;
+}
+
+.markWrapperRow {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  align-items: stretch;
+  grid-gap: var(--testNumPanelCell-gap);
+}
+
+.markRow {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  align-items: stretch;
+  grid-gap: var(--markCell-gap);
+}
+
+.markWrapperCol {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: stretch;
+  grid-gap: var(--testNumPanelCell-gap);
+}
+
+.markCol {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: stretch;
+  grid-gap: var(--markCell-gap);
+}
+
+.markCell {
+  background: white;
+
+  font-size: 11px;
+  font-weight: bold;
+
+  box-sizing: border-box;
+
+  padding: 0;
+  margin: 0;
+
+  cursor: pointer;
+}
+
+.markCell.waiting {
+  background: var(--board-background);
+}
+
+#sudokuBoard .cell,
+#sudokuBoard .cellContainer {
+  height: var(--cell-height);
+
+  box-sizing: border-box;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+
+  font-size: 30px;
+  background: white;
+  border: var(--cell_border_thickness) solid black;
+
+  cursor: pointer;
+}
+
+#sudokuBoard .cell {
+  box-sizing: border-box;
+  line-height: var(--cell-inHeight);
+}
+
+.cell > span {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 0;
+}
+
+#sudokuBoard .block .cellContainer {
+  grid-row: span 1;
+
+  display: grid;
+  grid-template-rows: 7fr 3fr;
+
+  background: red;
+}
+
+.smallCell {
+  font-size: 12px;
+  background: #eee;
+}
+
+#sudokuBoard .subBlock {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}

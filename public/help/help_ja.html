@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <link rel="stylesheet" href="bootstrap-4.1.3-dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/help.css" />
+
+    <title>ナンプレ ヘルプ</title>
+  </head>
+  <!-- <body> -->
+  <body data-spy="scroll" data-target="#navbarResponsive">
+    <!-- Start Home Section -->
+    <div id="home">
+      <!-- Navigation -->
+      <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+        <a href="#" class="navbar-brand">
+          <img src="screenshots/sudoku.ico" alt="" />
+          <span class="text-white pl-1">ナンプレヘルパー・ヘルプ</span>
+          <!-- <span class="text-white pl-1">Number Place Helper - Help</span> -->
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarResponsive"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <!-- <a href="#home" class="nav-link">Home</a> -->
+              <a href="#home" class="nav-link">ホーム</a>
+            </li>
+            <li class="nav-item">
+              <a href="#howToPlayGamesWithThisSite" class="nav-link">遊び方</a>
+            </li>
+            <li class="nav-item">
+              <a href="#HowToPlayWithHelperFunctions" class="nav-link"
+                >ヘルパー機能を使う</a
+              >
+            </li>
+            <li class="nav-item">
+              <a href="#otherFunctions" class="nav-link">その他の機能</a>
+            </li>
+            <!-- <li class="nav-item">
+              <a href="#clients" class="nav-link">Clients</a>
+            </li>
+            <li class="nav-item">
+              <a href="#contact" class="nav-link">Contact</a>
+            </li> -->
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <!-- End Navigation-->
+
+    <!-- Start howToPlay -->
+    <!-- <div class="landing">
+      <div class="home-wrap">
+        <div class="home-inner"></div>
+      </div>
+    </div> -->
+
+    <div class="mySection">
+      <div class="row">
+        <div class="col-md-1 dummy"></div>
+        <!-- <div class="col-md-1 dummy border-left"></div> -->
+        <h1 class="text-center col-md-10">
+          ナンプレ（数独）の遊び方
+        </h1>
+      </div>
+
+      <div class="row">
+        <div class="col-md-3">
+          <h3 class="text-right pr-3 pt-4">ルール</h3>
+        </div>
+        <!-- <a href="#course" class="btn btn-outline-light btn-lg">Get Started</a> -->
+        <div class="description col-md-8 text-left pl-3 pt-4 border-left">
+          <p>空いたセル（マス目）の中に１から９の数字を入れていきます。</p>
+          <p>
+            その際、行（横の並び）、列（たての並び）、ブロック（3×3のセルのまとまり）のいずれにも同じ数字が二つ入らないようにしなければなりません。
+          </p>
+          <p>
+            言い換えると、ひとつの行には９つのセルがありますが、それぞれに１から９までの全ての数字がひとつずつ入ります。同様にどの列、どのブロックについても、必ず１から9までの全ての数字が使われます。
+          </p>
+          <div class="row justify-content-around mt-5">
+            <div class="col-md-3 bg-dark">
+              <figure class="w-100">
+                <img
+                  src="./screenshots/sudoku_row.png"
+                  alt=""
+                  width="100%"
+                  height="100%"
+                  style="margin-bottom: -2rem"
+                />
+                <figcaption class="text-center">行の例</figcaption>
+              </figure>
+            </div>
+
+            <div class="col-md-3 bg-dark">
+              <figure class="w-100">
+                <img
+                  src="./screenshots/sudoku_col.png"
+                  alt=""
+                  width="100%"
+                  height="100%"
+                  style="margin-bottom: -2rem"
+                />
+                <figcaption class="text-center">列の例</figcaption>
+              </figure>
+            </div>
+
+            <div class="col-md-3 bg-dark">
+              <figure class="w-100">
+                <img
+                  src="./screenshots/sudoku_blk.png"
+                  alt=""
+                  width="100%"
+                  height="100%"
+                  style="margin-bottom: -2rem"
+                />
+                <figcaption class="text-center">
+                  ブロックの例
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+          <div class="endOfSection"></div>
+        </div>
+        <!-- End Content of how to play -->
+      </div>
+      <!-- End How to play -->
+    </div>
+    <!-- End Home Section -->
+
+    <!-- Start HowToPlayWithThisSite Section -->
+    <div id="howToPlayGamesWithThisSite" class="mySection">
+      <!-- <h1 class="text-center">
+        ナンプレヘルパーの使い方
+      </h1> -->
+      <div class="row">
+        <div class="col-md-1 dummy"></div>
+        <!-- <div class="col-md-1 dummy border-left"></div> -->
+        <h1 class="text-center col-md-10">
+          ナンプレヘルパーで遊ぶ
+        </h1>
+      </div>
+
+      <div class="row">
+        <div class="col-md-3">
+          <h3 class="text-right pr-3 pt-4">ゲームを始める</h3>
+        </div>
+        <div class="description col-md-8 text-left pl-3 pt-4 border-left">
+          <p>
+            ナンプレヘルパーで遊ぶ方法を紹介します。
+          </p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-3">
+          <h4 class="text-right pr-3">サンプルゲームで遊ぶ</h4>
+        </div>
+        <div class="description col-md-8 text-left pl-3 border-left">
+          <p>
+            「サンプルゲーム」下のボタンを押すとサンプルゲームが表示されます。左から、初心者、初級、中級、上級、超上級の問題が並んでいます。
+          </p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-3 dummySpace"></div>
+        <div class="col-md-8 dummySpace border-left pt-3"></div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-3">
+          <h4 class="text-right pr-3">問題集の問題を入力する</h4>
+        </div>
+
+        <div class="description col-md-8 text-left pl-3 border-left">
+          <p>
+            最初にページを表示した際、または「新しいゲーム」ボタンを押した際には、ボード上に何も数字が表示されていません。この状態で、下に示す方法でセルに数字を入力して問題を作成します。
+          </p>
+        </div>
+      </div>
+
+      <div class="row dummySpace pt-５">
+        <div class="col-md-3"></div>
+        <div class="col-md-8 border-left"></div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-3">
+          <h3 class="text-right pr-3">数字を入力する</h3>
+        </div>
+
+        <div class="description col-md-8 text-left pl-3 border-left">
+          <p>
+            数字を入力する方法は二通りあります。先に入力するセルを決める方法と、先に入力する数字を決める方法です。
+          </p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-3">
+          <h4 class="text-right pr-3">セルを先に決める</h4>
+        </div>
+
+        <div class="description col-md-8 text-left pl-3 border-left">
+          <p>
+            マウスカーソルを入力したいセルの上に移動し、クリックすると数字パネルが表示されます。数字をクリックして入力します（下図）。
+          </p>
+
+          <div class="row">
+            <div class="col-md-5 pt-2 pl-5 mb-4">
+              <figure>
+                <img
+                  src="./screenshots/inputNum.png"
+                  alt=""
+                  width="100%"
+                  height="100%"
+                  class="mb-2"
+                />
+                <figcaption class="text-center pt-2 small">
+                  セルを決めてから数字を入力する
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-3">
+          <h4 class="text-right pr-3">数字を先に決める</h4>
+        </div>
+
+        <div class="description col-md-8 text-left pl-3 border-left">
+          <p>
+            ウィンドウ右側の「ヘルパーパネル」内の数字をクリックして入力する数字を決定します。
+          </p>
+
+          <p>
+            その後セルをクリックすると選択された数字が入力されます。
+          </p>
+
+          <div class="row">
+            <div class="col-md-5 pt-2 pl-5 mb-4">
+              <figure>
+                <img
+                  src="./screenshots/determineNum.png"
+                  alt=""
+                  width="100%"
+                  height="100%"
+                  class="mb-2"
+                />
+                <figcaption class="text-center pt-2 small">
+                  数字を決めてから数字を入力する
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-3">
+          <h4 class="text-right pr-3">問題を確定する</h4>
+        </div>
+
+        <div class="description col-md-8 text-left pl-3 border-left">
+          <p>
+            ウィンドウ左側の「ゲームパネル」内の「ゲームスタート」ボタンをクリックして問題を確定し、ゲームを始めます。
+          </p>
+        </div>
+      </div>
+
+      <div class="description col-md-8 text-left pl-3 border-left"></div>
+    </div>
+    <!-- End HowToPlayWithThisSite Section -->
+
+    <!-- Start HowToPlayWithHelperFunctions Section -->
+    <div id="HowToPlayWithHelperFunctions" class="mySection">
+      <div class="row">
+        <div class="col-md-1 dummy"></div>
+        <h1 class="text-center col-md-10">
+          ヘルパー機能を使う
+        </h1>
+      </div>
+
+      <div class="row">
+        <div class="col-md-3">
+          <h3 class="text-right pr-3 pt-4">ヘルパー機能</h3>
+        </div>
+
+        <div class="description col-md-8 text-left pl-3 pt-4 border-left">
+          <p>
+            ナンプレヘルパーで利用可能なヘルパー機能は主に４種類あります。
+          </p>
+          <ol>
+            <li>
+              入力チェック機能
+            </li>
+            <li>
+              単一数表示機能
+            </li>
+            <li>
+              候補表示機能
+            </li>
+            <li>
+              マーカー表示機能
+            </li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-3">
+          <h4 class="text-right pr-3">入力チェック機能</h4>
+        </div>
+        <div class="description col-md-8 text-left pl-3 border-left">
+          <p>
+            入力チェック機能には、「重複チェック」と「不正解入力チェック」があります。
+          </p>
+          <p>
+            「重複チェック」では、行、列、ブロックのいずれかに誤まって同じ数字が二つ入力された際に警告を発します。
+          </p>
+          <p>
+            「不正解入力チェック」では、解析プログラムによってあらかじめ得られた答えと異なる数字が入力された際に警告を発します。
+          </p>
+          <p class="small">
+            （解析プログラムは全ての問題を解くことはできません。）
+          </p>
+        </div>
+      </div>
+
+      <div class="row dummySpace pt-５">
+        <div class="col-md-3"></div>
+        <div class="col-md-8 border-left"></div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-3">
+          <h4 class="text-right pr-3">単一数表示機能</h4>
+        </div>
+        <div class="description col-md-8 text-left pl-3 border-left">
+          <p>
+            特定の数字（例えば２）に注目して問題を解く際に他の数字を目立たないようにすることができます。
+          </p>
+          <p>
+            ヘルパーパネル内の数字をクリックすることにより、注目する数字を切り替えることができます。
+          </p>
+          <p>
+            単一数表示機能は４段階選択できます。
+          </p>
+          <ol class="forLevel" style="--start:0" start="0">
+            <!-- <ol class="forLevel" start="0"> -->
+            <!-- <ol class="forLevel"> -->
+            <li>
+              設定された数字以外の数字を目立たなくする
+            </li>
+            <li>
+              すでに盤上にある選択された数字によって入力が禁止されるセルをグレー表示する
+            </li>
+            <li>
+              選択可能なセルを目立たせる
+            </li>
+            <li>
+              他のブロックの入力可能なセルの配置から入力が禁止されるセルもグレー表示する
+            </li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="row dummySpace pt-５">
+        <div class="col-md-3"></div>
+        <div class="col-md-8 border-left"></div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-3"></div>
+        <div class="description col-md-8 text-left pl-3 border-left">
+          <div class="row justify-content-around">
+            <div class="col-md-5">
+              <figure class="w-100">
+                <img
+                  src="./screenshots/singleNum.png"
+                  alt=""
+                  width="100%"
+                  height="100%"
+                  class="mb-3"
+                />
+                <figcaption class="text-center">
+                  単一数表示を有効にした状態
+                </figcaption>
+              </figure>
+            </div>
+            <div class="col-md-5">
+              <figure class="w-100">
+                <img
+                  src="./screenshots/candidates.png"
+                  alt=""
+                  width="100%"
+                  height="100%"
+                  class="mb-3"
+                />
+                <figcaption class="text-center">
+                  候補表示を有効にした状態
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row dummySpace pt-５">
+        <div class="col-md-3"></div>
+        <div class="col-md-8 border-left"></div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-3">
+          <h4 class="text-right pr-3">候補表示機能</h4>
+        </div>
+
+        <div class="description col-md-8 text-left pl-3 border-left">
+          <p>
+            セルに入力可能な数字を表示します。
+          </p>
+          <p>
+            セル内の候補の数字をクリックすることにより、候補から除外することができます。
+          </p>
+          <p>
+            また、数字の表示されていないセルをクリックすると候補に追加（復活）できます。
+          </p>
+          <p>ヘルプレベルは７段階選択可能です。</p>
+
+          <!-- <div class="row dummySpace pt-2">
+            <div class="col-md-3"></div>
+            <div class="col-md-8 border-left"></div>
+          </div> -->
+
+          <ol class="forLevel" style="--start:0" start="0">
+            <!-- <ol class="forLevel" start="0"> -->
+            <!-- <ol class="forLevel"> -->
+            <li>
+              候補の表示（選択不可能な数字も含め全ての数字を表示します。）
+            </li>
+            <li>
+              すでに盤上にある数字によって選択不可能な数字は除外して、選択可能な数字だけ表示します。
+            </li>
+            <li>
+              数字が選択可能なセルを目立たせます。
+            </li>
+            <li>
+              特定の数字について、他のブロックの入力可能なセルの配置から入力が禁止される場合、候補から除外します。
+            </li>
+            <li>
+              確定ではないのもの、セルの候補が二つ以上の数字に限定されるケース（ニコリの解説で「予約」と呼ばれるもの）。
+            </li>
+            <li>
+              特定の数字が長方形状に配置され、他のセルに入る可能性が除外できるケース（ニコリの解説で「井桁」と呼ばれるもの）。
+            </li>
+            <li>
+              長方形を形成するセルの組み合わせにおいて、そのひとつのセルに特定の数が入ると仮定すると対角のセルに入る数字がなくなってしまう（その特定の数が入ることはあり得ない）ケース。
+            </li>
+          </ol>
+
+          <div class="row">
+            <div class="col-md-5 pt-2 pl-5 mb-4">
+              <figure>
+                <img
+                  src="./screenshots/levelController.png"
+                  alt=""
+                  width="100%"
+                  height="100%"
+                  class="mb-2"
+                />
+                <figcaption class="text-center pt-2 small">
+                  レベルボタン
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row dummySpace pt-５">
+        <div class="col-md-3"></div>
+        <div class="col-md-8 border-left"></div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-3">
+          <h4 class="text-right pr-3">両機能同時使用</h4>
+        </div>
+
+        <div class="description col-md-8 text-left pl-3 border-left">
+          <p>
+            単一数表示または候補表示を有効にした状態で、他方の機能のボタンを押すと二つの機能が同時利用できます。
+          </p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-3 pt-3">
+          <h4 class="text-right pr-3">複数数表示機能</h4>
+        </div>
+
+        <div class="description col-md-8 text-left pl-3 pt-3 border-left">
+          <p>
+            両機能同時使用状態で、もう一度「単一数表示」ボタンを押すと複数数表示に切り替わります。
+            <!-- この機能は試験的に実装してみたものの、有効な活用法が見いだせていません。 -->
+          </p>
+        </div>
+      </div>
+
+      <div class="row dummySpace pt-５">
+        <div class="col-md-3"></div>
+        <div class="col-md-8 border-left"></div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-3">
+          <h4 class="text-right pr-3">マーカー機能</h4>
+        </div>
+        <div class="description col-md-8 text-left pl-3 border-left">
+          <p>
+            特定の数字があるブロック内で特定の行（または列）に限定される場合、その状態にあることをメモしておく機能です。
+          </p>
+
+          <figure class="w-100 my-4">
+            <img
+              src="./screenshots/marker.png"
+              alt=""
+              class="centeringFigure"
+              width="70%"
+              height="70%"
+            />
+            <figcaption class="text-center">マーカーを表示した状態</figcaption>
+          </figure>
+
+          <p>
+            レベル１以上に設定してある場合、二つまたは三つの数字をマーカーに記入すると、排他性を有するケース（レベル４で検索、表示される候補の組み合わせ）を表示します。
+          </p>
+
+          <figure class="w-100 my-4">
+            <img
+              src="./screenshots/marker_L1.png"
+              alt=""
+              class="centeringFigure"
+              width="30%"
+              height="30%"
+            />
+            <figcaption class="text-center">マーカーを表示した状態</figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <div class="row dummySpace pt-５">
+        <div class="col-md-3"></div>
+        <div class="col-md-8 border-left"></div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-3">
+          <h3 class="text-right pr-3 pt-4">コントロールボタン</h3>
+        </div>
+
+        <div class="description col-md-8 text-left pl-3 pt-4 border-left">
+          <p>
+            コントロールボタンで次のヒントを表示したり、戻したり、選択可能なセルを一括選択したりできます。コントロールボタンには以下の６つの機能があります。
+          </p>
+          <p>
+            ヘルパー機能のレベルによっては使えない場合があります。
+          </p>
+
+          <ol>
+            <li>
+              一括巻き戻し
+            </li>
+            <li>
+              ひとつ前の状態に戻す
+            </li>
+            <li>
+              ヘルプ表示を一段階進める
+            </li>
+            <li>
+              指定されたレベルで進めるところまで一気に進める
+            </li>
+            <li>
+              選択可能なセルを一括選択する
+            </li>
+            <li>
+              候補セルのカラー表示を消す
+            </li>
+          </ol>
+
+          <div class="row">
+            <div class="col-md-5 pt-2 pl-5 mb-4">
+              <figure>
+                <img
+                  src="./screenshots/controlButtons.png"
+                  alt=""
+                  width="100%"
+                  height="100%"
+                  class="mb-2"
+                />
+                <figcaption class="text-center pt-2 small">
+                  コントロールボタン
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-3">
+          <h4 class="text-right pr-3">一括巻き戻し</h4>
+        </div>
+
+        <div class="description col-md-8 text-left pl-3 border-left">
+          <p class="withImageAtLeft">
+            <img
+              src="./screenshots/rewindButton.png"
+              alt=""
+              width="40px"
+              height="20px"
+              class="pr-2"
+            />
+
+            選択不可能なセルができてしまうなど、何らかの理由で一気に戻りたい場合に使用します。解答と合わない入力がある場合、その入力があった時点まで戻ります。
+          </p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-3">
+          <h4 class="text-right pr-3">１段階戻る</h4>
+        </div>
+
+        <div class="description col-md-8 text-left pl-3 border-left">
+          <p class="withImageAtLeft">
+            <img
+              src="./screenshots/backwardButton.png"
+              alt=""
+              width="40px"
+              height="20px"
+              class="pr-2"
+            />
+
+            ヘルパー機能によって変更された状態をひとつ戻したい場合や、誤まって入力（や削除）してしまった場合などに使用します。
+          </p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-3">
+          <h4 class="text-right pr-3">ヘルパー機能を１段階進める</h4>
+        </div>
+
+        <div class="description col-md-8 text-left pl-3 border-left">
+          <p class="withImageAtLeft">
+            <img
+              src="./screenshots/forwardButton.png"
+              alt=""
+              width="40px"
+              height="20px"
+              class="pr-2"
+            />
+
+            さらにヒントが必要な時に使用します。選択されたレベルでは有効なヒント見つからない場合には表示は変わりません。
+          </p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-3">
+          <h4 class="text-right pr-3">ヘルパー機能を一気に進める</h4>
+        </div>
+
+        <div class="description col-md-8 text-left pl-3 border-left">
+          <p class="withImageAtLeft">
+            <img
+              src="./screenshots/fastForwardButton.png"
+              alt=""
+              width="40px"
+              height="20px"
+              class="pr-2"
+            />
+
+            選択されたレベルで得られる全てのヒントが表示されます。
+          </p>
+          <p>
+            解答を確認したい場合や、簡単なレベルの作業を飛ばしたい場合に使用します。
+          </p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-3">
+          <h4 class="text-right pr-3">選択可能なセルを一括選択する</h4>
+        </div>
+
+        <div class="description col-md-8 text-left pl-3 border-left">
+          <p class="withImageAtLeft">
+            <img
+              src="./screenshots/selectSelectableButton.png"
+              alt=""
+              width="40px"
+              height="20px"
+              class="pr-2"
+            />
+
+            全ての選択可能なセルの数字を確定させます。
+          </p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-3">
+          <h4 class="text-right pr-3">候補セルの色を解除</h4>
+        </div>
+
+        <div class="description col-md-8 text-left pl-3 border-left">
+          <p class="withImageAtLeft">
+            <img
+              src="./screenshots/eraseColorButton.png"
+              alt=""
+              width="40px"
+              height="20px"
+              class="pr-2"
+            />
+
+            ヒントとして表示された候補セルの色を消します。
+          </p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-3">
+          <h4 class="text-right pr-3">無効な排他的候補を非表示</h4>
+        </div>
+        <div class="description col-md-8 text-left pl-3 border-left">
+          <p>
+            レベル3以上の排他的候補の条件は満たすものの、ゲームの進展に寄与しない（他の候補をひとつも削除可能にしない）排他的候補（ヒント）の表示、非表示を指定できます。
+          </p>
+          <p>
+            デフォルトでオン（非表示）です。選択されたレベルで、どういう候補の組み合わせが条件に合致するか確認したい場合にはオフにしてください。
+          </p>
+        </div>
+      </div>
+
+      <div class="description col-md-8 text-left pl-3 border-left"></div>
+    </div>
+
+    <!-- End HowToPlayWithHelperFunctions Section -->
+
+    <!-- Start otherFunctions Section -->
+    <div id="otherFunctions" class="mySection">
+      <div class="row">
+        <div class="col-md-1 dummy"></div>
+        <h1 class="text-center col-md-10">
+          その他の機能
+        </h1>
+      </div>
+
+      <div class="row">
+        <div class="col-md-3">
+          <h3 class="text-right pr-3 pt-4">新しいゲーム</h3>
+        </div>
+        <div class="description col-md-8 text-left pl-3 pt-4 border-left">
+          <p>
+            ゲームの途中または終了後、「新しいゲーム」ボタンを押すことで、別のゲームを入力できるようになります。
+          </p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-3">
+          <h3 class="text-right pr-3 pt-4">再スタート</h3>
+        </div>
+        <div class="description col-md-8 text-left pl-3 pt-4 border-left">
+          <p>
+            ゲームの途中または終了後、「再スタート」ボタンを押すことで、ゲームの最初の状態に戻すことができます。
+          </p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-3">
+          <h3 class="text-right pr-3 pt-4">言語切り替え</h3>
+        </div>
+        <div class="description col-md-8 text-left pl-3 pt-4 border-left">
+          <p>
+            ヘルパーパネル下部のボタンが「日本語」と表示されている場合には、ボタンを押すと日本語表示に切り替わります。「English」の表示の際にそのボタンを押すと英語表示になります。
+          </p>
+        </div>
+      </div>
+
+      <div class="description col-md-8 text-left pl-3 border-left"></div>
+    </div>
+
+    <!-- End otherFunctions Section -->
+  </body>
+</html>
