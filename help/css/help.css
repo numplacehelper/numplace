@@ -1,0 +1,157 @@
+body {
+  overflow-x: hidden;
+  font-family: "Lato", sans-serif;
+  color: #505962;
+  background: #a4a4a4;
+}
+
+.offset:before {
+  display: block;
+  content: "";
+  height: 4rem;
+  margin-top: -4rem;
+}
+
+/*--- Navigation ---*/
+.navbar {
+  height: 3.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 0.1rem;
+  background: rgba(0, 0, 0, 1) !important;
+}
+
+/* .navbar-brand {
+  background: red;
+} */
+
+.navbar-brand span {
+  /* display: inline-block; */
+  /* height: 2rem; */
+  /* text-align: bottom; */
+  font-size: 1.5rem;
+  /* background: yellow; */
+}
+
+.navbar-brand img {
+  height: 2rem;
+  padding-bottom: 0.25rem;
+  /* vertical-align: center; */
+}
+
+.navbar-nav li {
+  padding-right: 0.7rem;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: white;
+  padding-top: 0.8rem;
+}
+
+.navbar-dark .navbar-nav .nav-link.active,
+.navbar-dark .navbar-nav .nav-link:hover {
+  /* color: #1ebba3; */
+  color: #00bfff;
+}
+
+/*--- Start Landing Page ---*/
+/* .home-inner {
+  background-image: url(img/computers.png);
+} */
+
+.mySection {
+  /* display: grid;
+  justify-content: space-around; */
+
+  width: 100%;
+  max-width: 100%;
+  /* margin-top: 0;
+  padding-top: 0; */
+  padding-top: 5rem;
+  padding-bottom: 2rem;
+  /* position: absolute; */
+  /* top: 10%; */
+  /* z-index: 1; */
+  color: white;
+  /* text-transform: uppercase; */
+}
+
+.mySection h1 {
+  /* padding-top: 200px; */
+  font-size: 2rem;
+  font-weight: 700;
+  text-shadow: 0.1rem 0.1rem 0.8rem black;
+  padding: 1.5rem 0;
+  border-top-style: solid;
+  border-width: 1px;
+}
+
+.mySection h3 {
+  font-size: 1.5rem;
+  text-shadow: 0.1rem 0.1rem 0.5rem black;
+  padding-bottom: 1.6rem;
+}
+
+.mySection h4 {
+  font-size: 1rem;
+  text-shadow: 0.1rem 0.1rem 0.5rem black;
+  padding-bottom: 1.6rem;
+}
+
+.mySection .endOfSection {
+  margin: 2rem 3rem;
+  /* border-bottom-style: solid;
+  border-width: 1px; */
+}
+
+p {
+  margin: 0 0 8px 0;
+  text-indent: 1em;
+  line-height: 1.4em;
+}
+
+ol.forLevelEn,
+ol.forLevel {
+  /* ol { */
+  counter-reset: item;
+  /* list-style-type: decimal; */
+  list-style-type: none;
+  counter-reset: step-counter calc(var(--start) - 1);
+  /* start: "0"; */
+  /* counter-reset: 0; */
+}
+
+.forLevelEn li,
+.forLevel li {
+  counter-increment: step-counter;
+  padding-left: 5rem;
+  text-indent: -5rem;
+}
+
+.forLevel li:before {
+  /* content: "レベル" counter(item, decimal) " : "; */
+  content: "レベル " counter(step-counter) " : ";
+  counter-increment: item;
+  padding-right: 0.5rem;
+}
+
+.forLevelEn li:before {
+  content: "Level " counter(step-counter) " : ";
+  counter-increment: item;
+  padding-right: 0.5rem;
+}
+
+.centeringFigure {
+  display: table;
+  margin: 1rem auto;
+}
+
+.withImageAtLeft {
+  padding-left: 4rem;
+  text-indent: -3em;
+}
+
+.dummySpace {
+  height: 2rem;
+}

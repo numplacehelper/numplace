@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <link rel="stylesheet" href="bootstrap-4.1.3-dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/help.css" />
+
+    <title>Number Place Help</title>
+  </head>
+  <!-- <body> -->
+  <body data-spy="scroll" data-target="#navbarResponsive">
+    <!-- Start Home Section -->
+    <div id="home">
+      <!-- Navigation -->
+      <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+        <a href="#" class="navbar-brand">
+          <img src="screenshots/sudoku.ico" alt="" />
+          <span class="text-white pl-1">Number Place Help</span>
+          <!-- <span class="text-white pl-1">Number Place Helper - Help</span> -->
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarResponsive"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <!-- <a href="#home" class="nav-link">Home</a> -->
+              <a href="#home" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="#howToPlayGamesWithThisSite" class="nav-link"
+                >How to play</a
+              >
+            </li>
+            <li class="nav-item">
+              <a href="#HowToPlayWithHelperFunctions" class="nav-link"
+                >Helper funcitons</a
+              >
+            </li>
+            <li class="nav-item">
+              <a href="#otherFunctions" class="nav-link">Other functions</a>
+            </li>
+            <!-- <li class="nav-item">
+              <a href="#clients" class="nav-link">Clients</a>
+            </li>
+            <li class="nav-item">
+              <a href="#contact" class="nav-link">Contact</a>
+            </li> -->
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <!-- End Navigation-->
+
+    <!-- Start howToPlay -->
+    <!-- <div class="landing">
+      <div class="home-wrap">
+        <div class="home-inner"></div>
+      </div>
+    </div> -->
+
+    <div class="mySection">
+      <div class="row">
+        <div class="col-md-1 dummy"></div>
+        <!-- <div class="col-md-1 dummy border-left"></div> -->
+        <h1 class="text-center col-md-10">
+          How to Play Namber Place (Sudoku)
+        </h1>
+      </div>
+
+      <div class="row">
+        <div class="col-md-3">
+          <h3 class="text-right pr-3 pt-4">Rule</h3>
+        </div>
+        <!-- <a href="#course" class="btn btn-outline-light btn-lg">Get Started</a> -->
+        <div class="description col-md-8 text-left pl-3 pt-4 border-left">
+          <p>
+            Putting numbers from one to nine onto the empty cells of the board
+            so that same numbers never appear in a row, a column, and a block.
+            In other words, every row (column and block) has all numbers from
+            one to nine.
+          </p>
+          <div class="row justify-content-around mt-5">
+            <div class="col-md-3 bg-dark">
+              <figure class="w-100">
+                <img
+                  src="./screenshots/sudoku_row.png"
+                  alt=""
+                  width="100%"
+                  height="100%"
+                  style="margin-bottom: -1.5rem"
+                />
+                <figcaption class="text-center">a row</figcaption>
+              </figure>
+            </div>
+
+            <div class="col-md-3 bg-dark">
+              <figure class="w-100">
+                <img
+                  src="./screenshots/sudoku_col.png"
+                  alt=""
+                  width="100%"
+                  height="100%"
+                  style="margin-bottom: -1.5rem"
+                />
+                <figcaption class="text-center">a column</figcaption>
+              </figure>
+            </div>
+
+            <div class="col-md-3 bg-dark">
+              <figure class="w-100">
+                <img
+                  src="./screenshots/sudoku_blk.png"
+                  alt=""
+                  width="100%"
+                  height="100%"
+                  style="margin-bottom: -1.5rem"
+                />
+                <figcaption class="text-center">
+                  a block
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+          <div class="endOfSection"></div>
+        </div>
+        <!-- End Content of how to play -->
+      </div>
+      <!-- End How to play -->
+    </div>
+    <!-- End Home Section -->
+
+    <!-- Start HowToPlayWithThisSite Section -->
+    <div id="howToPlayGamesWithThisSite" class="mySection">
+      <!-- <h1 class="text-center">
+        ナンプレヘルパーの使い方
+      </h1> -->
+      <div class="row">
+        <div class="col-md-1 dummy"></div>
+        <!-- <div class="col-md-1 dummy border-left"></div> -->
+        <h1 class="text-center col-md-10">
+          Playing with the number place helper
+        </h1>
+      </div>
+
+      <div class="row">
+        <div class="col-md-3">
+          <h3 class="text-right pr-3 pt-4">Starting a game</h3>
+        </div>
+        <div class="description col-md-8 text-left pl-3 pt-4 border-left">
+          <p>
+            <!-- Introducing the way to play with the number place helper. -->
+          </p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-3">
+          <h4 class="text-right pr-3">Playing same games</h4>
+        </div>
+        <div class="description col-md-8 text-left pl-3 border-left">
+          <p>
+            Pressing a button below the &ldquo;Sample Games&rdquo;. From the
+            left, &ldquo;B&rdquo; stands for begginer, &ldquo;E&rdquo; for easy,
+            &ldquo;M&rdquo; for medium, &ldquo;H&rdquo; for hard, and
+            &ldquo;X&rdquo; for eXtreme, respectively.
+          </p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-3 dummySpace"></div>
+        <div class="col-md-8 dummySpace border-left pt-3"></div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-3">
+          <h4 class="text-right pr-3">
+            Setting up a game
+          </h4>
+        </div>
+
+        <div class="description col-md-8 text-left pl-3 border-left">
+          <p>
+            To input a game from other sources, press &ldquo;New Game&rdquo;
+            button, and then, input numbers as follows.
+          </p>
+        </div>
+      </div>
+
+      <div class="row dummySpace pt-５">
+        <div class="col-md-3"></div>
+        <div class="col-md-8 border-left"></div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-3">
+          <h3 class="text-right pr-3">Inserting numbers</h3>
+        </div>
+
+        <div class="description col-md-8 text-left pl-3 border-left">
+          <p>
+            There are two ways to insert numbers on the board, determining
+            either cell first or number first.
+          </p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-3">
+          <h4 class="text-right pr-3">Assigning a cell first</h4>
+        </div>
+
+        <div class="description col-md-8 text-left pl-3 border-left">
+          <p>
+            Click a cell where you want to insert a number. A number panel shown
+            below will pop up, and then, click a number.
+          </p>
+
+          <div class="row">
+            <div class="col-md-5 pt-2 pl-5 mb-4">
+              <figure>
+                <img
+                  src="./screenshots/inputNum.png"
+                  alt=""
+                  width="100%"
+                  height="100%"
+                  class="mb-2"
+                />
+                <figcaption class="text-center pt-2">
+                  Assigning a cell first then, a number
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-3">
+          <h4 class="text-right pr-3">Assigning number first</h4>
+        </div>
+
+        <div class="description col-md-8 text-left pl-3 border-left">
+          <p>
+            Click a number in the number pane in the &ldquo;Helper&rdquo; panel
+            to set the number.
+          </p>
+
+          <p>
+            Then, click a cell you are going to assign the number.
+          </p>
+
+          <div class="row">
+            <div class="col-md-5 pt-2 pl-5 mb-4">
+              <figure>
+                <img
+                  src="./screenshots/determineNum_en.png"
+                  alt=""
+                  width="100%"
+                  height="100%"
+                  class="mb-2"
+                />
+                <figcaption class="text-center pt-2 small">
+                  Assigning a number then a cell
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-3">
+          <h4 class="text-right pr-3">Set a game</h4>
+        </div>
+
+        <div class="description col-md-8 text-left pl-3 border-left">
+          <p>
+            After you set all numbers for a game, click the &ldquo;Set &amp;
+            Play&rdquo; button in the &ldquo;Game Control&rdquo; panel to start
+            the game.
+          </p>
+        </div>
+      </div>
+
+      <div class="description col-md-8 text-left pl-3 border-left"></div>
+    </div>
+    <!-- End HowToPlayWithThisSite Section -->
+
+    <!-- Start HowToPlayWithHelperFunctions Section -->
+    <div id="HowToPlayWithHelperFunctions" class="mySection">
+      <div class="row">
+        <div class="col-md-1 dummy"></div>
+        <h1 class="text-center col-md-10">
+          Using helper functions
+        </h1>
+      </div>
+
+      <div class="row">
+        <div class="col-md-3">
+          <h3 class="text-right pr-3 pt-4">Helper functions</h3>
+        </div>
+
+        <div class="description col-md-8 text-left pl-3 pt-4 border-left">
+          <p>
+            There four functions to help you solving a game.
+          </p>
+          <ol>
+            <li>
+              Input Check Function
+            </li>
+            <li>
+              Single Number ffunction
+            </li>
+            <li>
+              Candiates Function
+            </li>
+            <li>
+              Marker
+            </li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-3">
+          <h4 class="text-right pr-3">Input Check</h4>
+        </div>
+        <div class="description col-md-8 text-left pl-3 border-left">
+          <p>
+            The input check has two functions, duplicates check and incorrect
+            insertion check.
+          </p>
+          <p>
+            &ldquo;Duplicates Check&rdquo; alerts when you accidentally insert a
+            number twice in a row/column/block.
+          </p>
+          <p>
+            &ldquo;Incorrect Insertion Check&rdquo; alerts when you insert a
+            number different from the solution, which the helper program
+            automatically solves at the beggining (not all games are solvable by
+            the program, though).
+          </p>
+        </div>
+      </div>
+
+      <div class="row dummySpace pt-５">
+        <div class="col-md-3"></div>
+        <div class="col-md-8 border-left"></div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-3">
+          <h4 class="text-right pr-3">Singlue Number</h4>
+        </div>
+        <div class="description col-md-8 text-left pl-3 border-left">
+          <p>
+            When you want to focus a single number, you can shadow other numbers
+            by pressing the &ldquo;Single Num&rdquo; button.
+          </p>
+          <p>
+            Initially, the number is set to one. You can change the number by
+            pressing a number (a radio button) in the number pane.
+          </p>
+          <p>
+            Single Number function has four levels.
+          </p>
+          <ol class="forLevelEn" style="--start:0" start="0">
+            <!-- <ol class="forLevel" start="0"> -->
+            <!-- <ol class="forLevel"> -->
+            <li>
+              Numbers other than the selected number will be shadowed.
+            </li>
+            <li>
+              Cells inhibited by the selected number will be shadowed.
+            </li>
+            <li>
+              Highlight selectable cells
+            </li>
+            <li>
+              Cells inhibited by the arrangement of the selected number in other
+              blocks will be shadowed.
+            </li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="row dummySpace pt-５">
+        <div class="col-md-3"></div>
+        <div class="col-md-8 border-left"></div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-3"></div>
+        <div class="description col-md-8 text-left pl-3 border-left">
+          <div class="row justify-content-around">
+            <div class="col-md-5">
+              <figure class="w-100">
+                <img
+                  src="./screenshots/singleNum_en.png"
+                  alt=""
+                  width="100%"
+                  height="100%"
+                  class="mb-3"
+                />
+                <figcaption class="text-center">
+                  Appearance when the single number function is enabled.
+                </figcaption>
+              </figure>
+            </div>
+            <div class="col-md-5">
+              <figure class="w-100">
+                <img
+                  src="./screenshots/candidates_en.png"
+                  alt=""
+                  width="100%"
+                  height="100%"
+                  class="mb-3"
+                />
+                <figcaption class="text-center">
+                  Appearance when the candidate function is enabled.
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row dummySpace pt-５">
+        <div class="col-md-3"></div>
+        <div class="col-md-8 border-left"></div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-3">
+          <h4 class="text-right pr-3">Candidate function</h4>
+        </div>
+
+        <div class="description col-md-8 text-left pl-3 border-left">
+          <p>
+            Candidate numbers are shown in each cell.
+          </p>
+          <p>
+            You can delete a number that you think it is not a candidate by
+            clicking the number.
+          </p>
+          <p>
+            You can also revive the number by clicking the shadowed number.
+          </p>
+          <p>The candidate function has seven levels.</p>
+
+          <!-- <div class="row dummySpace pt-2">
+            <div class="col-md-3"></div>
+            <div class="col-md-8 border-left"></div>
+          </div> -->
+
+          <ol class="forLevel" style="--start:0" start="0">
+            <!-- <ol class="forLevel" start="0"> -->
+            <!-- <ol class="forLevel"> -->
+            <li>
+              Present all candidates including numbers inhibited by the numbers
+              on the board.
+            </li>
+            <li>
+              Present all candidates excluding numbers inhibited by the numbers
+              on the board.
+            </li>
+            <li>
+              Highlight selectable numbers.
+            </li>
+            <li>
+              Numbers inhibited by the arrangement of the number in other blocks
+              will be shadowed.
+            </li>
+            <li>
+              Hightlighting a combination of numbers exclude other numbers
+              (&ldquo;Reserved&rdquo; in the definition by Nikoli) and shadowing
+              numbers excluded by the exclusive candidates.
+            </li>
+            <li>
+              Highlighting a case that a number aligned in a rectangle and
+              shadowing the number in cells inhibited by the rectangle
+              alignment.
+            </li>
+            <li>
+              Hightling a case that an assumption leads to no solution (a kind
+              of proof of contradiction) and shadowing the number denied by
+              that.
+            </li>
+          </ol>
+
+          <div class="row">
+            <div class="col-md-5 pt-2 pl-5 mb-4 mx-auto">
+              <figure>
+                <img
+                  src="./screenshots/levelController.png"
+                  alt=""
+                  width="100%"
+                  height="100%"
+                  class="mb-2"
+                />
+                <figcaption class="text-center pt-2 small">
+                  Level control buttons
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-3">
+          <h4 class="text-right pr-3">Combining the two functions</h4>
+        </div>
+
+        <div class="description col-md-8 text-left pl-3 border-left">
+          <p>
+            While one function (either Single Number or Candidates) is active,
+            pressing the ohter function button will activate both functions.
+          </p>
+        </div>
+      </div>
+
+      <!-- <div class="row dummySpace pt-5">
+        <div class="col-md-3"></div>
+        <div class="col-md-8 border-left"></div>
+      </div> -->
+
+      <div class="row">
+        <div class="col-md-3">
+          <h4 class="text-right pr-3 pt-3">Multiple Numbers</h4>
+        </div>
+
+        <div class="description col-md-8 text-left pl-3 pt-3 border-left">
+          <p>
+            While the combined function (both Single Number or Candidates) is
+            active, pressing the Single Number button will activate Multiple
+            Number function, which is an experimental function.
+            <!-- (I have never found this function useful, though). -->
+          </p>
+        </div>
+      </div>
+
+      <div class="row dummySpace pt-５">
+        <div class="col-md-3"></div>
+        <div class="col-md-8 border-left"></div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-3">
+          <h4 class="text-right pr-3">Marker Functions</h4>
+        </div>
+        <div class="description col-md-8 text-left pl-3 border-left">
+          <p>
+            You can take note to show a number can only be in a specific row (or
+            column) in a block with the marker function.
+          </p>
+
+          <figure class="w-100 my-4">
+            <img
+              src="./screenshots/marker_en.png"
+              alt=""
+              class="centeringFigure"
+              width="70%"
+              height="70%"
+            />
+            <figcaption class="text-center">
+              Appearance wih marker function
+            </figcaption>
+          </figure>
+
+          <p>
+            When the marker function with the candidate function level 1 (or
+            above), exclusive candidates will be highlighted.
+          </p>
+
+          <figure class="w-100 my-4">
+            <img
+              src="./screenshots/marker_L1.png"
+              alt=""
+              class="centeringFigure"
+              width="30%"
+              height="30%"
+            />
+            <figcaption class="text-center">
+              An example that numbers in the marker are excluding the numbers in
+              other cells.
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <div class="row dummySpace pt-５">
+        <div class="col-md-3"></div>
+        <div class="col-md-8 border-left"></div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-3">
+          <h3 class="text-right pr-3 pt-4">Control Buttons</h3>
+        </div>
+
+        <div class="description col-md-8 text-left pl-3 pt-4 border-left">
+          <p>
+            You can control the state of the board with the control buttons such
+            as stepping back or stepping forward your operations or helper
+            functions.
+          </p>
+          <p>
+            Some functions may not be available depending the helper level.
+          </p>
+
+          <ol>
+            <li>
+              Rewind
+            </li>
+            <li>
+              Backward
+            </li>
+            <li>
+              Forward
+            </li>
+            <li>
+              Fast Forward
+            </li>
+            <li>
+              Select Selectables
+            </li>
+            <li>
+              Erase Colors
+            </li>
+          </ol>
+
+          <div class="row">
+            <div class="col-md-5 pt-2 pl-5 mb-4">
+              <figure>
+                <img
+                  src="./screenshots/controlButtons_en.png"
+                  alt=""
+                  width="100%"
+                  height="100%"
+                  class="mb-2"
+                />
+                <figcaption class="text-center pt-2 small">
+                  Control buttons
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-3">
+          <h4 class="text-right pr-3">Rewind</h4>
+        </div>
+
+        <div class="description col-md-8 text-left pl-3 border-left">
+          <p class="withImageAtLeft">
+            <img
+              src="./screenshots/rewindButton.png"
+              alt=""
+              width="40px"
+              height="20px"
+              class="pr-2"
+            />
+
+            You can go back the point that you took a mistake. Otherwise, the
+            function is the same as &ldquo;Restart&rdquo;.
+          </p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-3">
+          <h4 class="text-right pr-3">Backward</h4>
+        </div>
+
+        <div class="description col-md-8 text-left pl-3 border-left">
+          <p class="withImageAtLeft">
+            <img
+              src="./screenshots/backwardButton.png"
+              alt=""
+              width="40px"
+              height="20px"
+              class="pr-2"
+            />
+
+            You can go back the previous state if you want to cancel your action
+            or the helper function.
+          </p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-3">
+          <h4 class="text-right pr-3">Forward</h4>
+        </div>
+
+        <div class="description col-md-8 text-left pl-3 border-left">
+          <p class="withImageAtLeft">
+            <img
+              src="./screenshots/forwardButton.png"
+              alt=""
+              width="40px"
+              height="20px"
+              class="pr-2"
+            />
+
+            You get another hint by clicking the &ldquo;Forward&rdquo; button.
+          </p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-3">
+          <h4 class="text-right pr-3">Fast Forward</h4>
+        </div>
+
+        <div class="description col-md-8 text-left pl-3 border-left">
+          <p class="withImageAtLeft">
+            <img
+              src="./screenshots/fastForwardButton.png"
+              alt=""
+              width="40px"
+              height="20px"
+              class="pr-2"
+            />
+
+            You get all the hints on the current helper level.
+          </p>
+          <p>
+            You may want to skip too easy processes (a low level manipulations
+            such as level 2) with the function.
+          </p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-3">
+          <h4 class="text-right pr-3">Select selectables</h4>
+        </div>
+
+        <div class="description col-md-8 text-left pl-3 border-left">
+          <p class="withImageAtLeft">
+            <img
+              src="./screenshots/selectSelectableButton.png"
+              alt=""
+              width="40px"
+              height="20px"
+              class="pr-2"
+            />
+
+            Assign numbers for selectable cells.
+          </p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-3">
+          <h4 class="text-right pr-3">Erase colors</h4>
+        </div>
+
+        <div class="description col-md-8 text-left pl-3 border-left">
+          <p class="withImageAtLeft">
+            <img
+              src="./screenshots/eraseColorButton.png"
+              alt=""
+              width="40px"
+              height="20px"
+              class="pr-2"
+            />
+
+            You can erase colors to highlight exclusive candidates.
+          </p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-3">
+          <h4 class="text-right pr-3">Skip ineffective exclusives</h4>
+        </div>
+        <div class="description col-md-8 text-left pl-3 border-left">
+          <p>
+            Not showing candidates that meets a condition as an exclusive
+            candidates without any effects to other numbers or other cells.
+          </p>
+          <p>
+            On by default (non-display). You might learn what kinds of alignment
+            can be exclusive to others by showing all exclusive candidates.
+          </p>
+        </div>
+      </div>
+
+      <div class="description col-md-8 text-left pl-3 border-left"></div>
+    </div>
+
+    <!-- End HowToPlayWithHelperFunctions Section -->
+
+    <!-- Start otherFunctions Section -->
+    <div id="otherFunctions" class="mySection">
+      <div class="row">
+        <div class="col-md-1 dummy"></div>
+        <h1 class="text-center col-md-10">
+          Other Functions
+        </h1>
+      </div>
+
+      <div class="row">
+        <div class="col-md-3">
+          <h3 class="text-right pr-3 pt-4">New Game</h3>
+        </div>
+        <div class="description col-md-8 text-left pl-3 pt-4 border-left">
+          <p>
+            To set up and play a new game, press the &ldquo;New Game&rdquo;
+            button.
+          </p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-3">
+          <h3 class="text-right pr-3 pt-4">Restart</h3>
+        </div>
+        <div class="description col-md-8 text-left pl-3 pt-4 border-left">
+          <p>
+            If you want to restart the game from the beggining, press the
+            &ldquo;Restart&rdquo; button.
+          </p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-3">
+          <h3 class="text-right pr-3 pt-4">Change language</h3>
+        </div>
+        <div class="description col-md-8 text-left pl-3 pt-4 border-left">
+          <p>
+            You can change the language from English to Japanese by pressing the
+            &ldquo;日本語&rdquo; button.
+          </p>
+        </div>
+      </div>
+
+      <div class="description col-md-8 text-left pl-3 border-left"></div>
+    </div>
+
+    <!-- End otherFunctions Section -->
+  </body>
+</html>
