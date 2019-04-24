@@ -23,6 +23,6 @@ yarn-debug.log*
 yarn-error.log*
 
 # not used
-/images_old
-/tmp
-/unused
+# /images_old
+# /tmp
+# /unused
