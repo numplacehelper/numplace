@@ -12,6 +12,8 @@ class Config {
   static maxUnionSize = 4;
   static maxSquareNum = 4;
 
+  // static footerClassName = "App-footer";
+
   static traceTypes = {
     numMatrix: "numMatrix",
     candidate: "candidate",

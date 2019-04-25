@@ -5,6 +5,7 @@ import Util from "../Util";
 
 import "../css/cell.css";
 import "../css/cellColor.css";
+import "../App.css";
 
 class Footer extends Component {
   render() {
