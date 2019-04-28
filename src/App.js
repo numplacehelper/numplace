@@ -1659,6 +1659,10 @@ class App extends Component {
     document.getElementById(Config.buttonIds.restart).blur();
   };
 
+  handleHelpButton = () => {
+    document.getElementById(Config.buttonIds.help).blur();
+  };
+
   handleLang = () => {
     this.setState(prevState => {
       return { lang: Util.flipLang(prevState.lang) };
@@ -1742,6 +1746,7 @@ class App extends Component {
             handleControls={this.handleControls}
             handleSkipIneffectiveStatus={this.handleSkipIneffectiveStatus}
             handleMarker={this.handleMarker}
+            handleHelpButton={this.handleHelpButton}
             handleLang={this.handleLang}
             handleClear={this.handleClear}
           />

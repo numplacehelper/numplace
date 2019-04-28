@@ -5,13 +5,14 @@ import Config from "../../Config";
 
 class HelpButton extends Component {
   handleHelp = () => {
-    const { lang } = this.props;
+    const { handleHelpButton, lang } = this.props;
 
     const fileName = Config.helpFiles[lang];
     const path = Config.helpPath + fileName;
 
     // window.open("./help/help_ja.html", "_blank");
     window.open(path, "_blank");
+    handleHelpButton();
   };
 
   render() {
