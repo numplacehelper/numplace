@@ -1,7 +1,7 @@
 {
   "main.css": "/numplace/static/css/main.73ebf6fa.chunk.css",
-  "main.js": "/numplace/static/js/main.db89e0b3.chunk.js",
-  "main.js.map": "/numplace/static/js/main.db89e0b3.chunk.js.map",
+  "main.js": "/numplace/static/js/main.db1887c3.chunk.js",
+  "main.js.map": "/numplace/static/js/main.db1887c3.chunk.js.map",
   "static/js/1.a7834cd1.chunk.js": "/numplace/static/js/1.a7834cd1.chunk.js",
   "static/js/1.a7834cd1.chunk.js.map": "/numplace/static/js/1.a7834cd1.chunk.js.map",
   "runtime~main.js": "/numplace/static/js/runtime~main.27a78476.js",
@@ -21,6 +21,6 @@
   "static/media/close.svg": "/numplace/static/media/close.37f834c1.svg",
   "static/css/main.73ebf6fa.chunk.css.map": "/numplace/static/css/main.73ebf6fa.chunk.css.map",
   "index.html": "/numplace/index.html",
-  "precache-manifest.bd200444d646e54d8d5ead5e1a1036ef.js": "/numplace/precache-manifest.bd200444d646e54d8d5ead5e1a1036ef.js",
+  "precache-manifest.6e500e64a9b7eb9ef124bfc103fe7033.js": "/numplace/precache-manifest.6e500e64a9b7eb9ef124bfc103fe7033.js",
   "service-worker.js": "/numplace/service-worker.js"
 }
