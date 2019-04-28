@@ -1,7 +1,7 @@
 {
-  "main.css": "/numplace/static/css/main.6987896a.chunk.css",
-  "main.js": "/numplace/static/js/main.6fc6101e.chunk.js",
-  "main.js.map": "/numplace/static/js/main.6fc6101e.chunk.js.map",
+  "main.css": "/numplace/static/css/main.73ebf6fa.chunk.css",
+  "main.js": "/numplace/static/js/main.db89e0b3.chunk.js",
+  "main.js.map": "/numplace/static/js/main.db89e0b3.chunk.js.map",
   "static/js/1.a7834cd1.chunk.js": "/numplace/static/js/1.a7834cd1.chunk.js",
   "static/js/1.a7834cd1.chunk.js.map": "/numplace/static/js/1.a7834cd1.chunk.js.map",
   "runtime~main.js": "/numplace/static/js/runtime~main.27a78476.js",
@@ -19,8 +19,8 @@
   "static/media/erase.svg": "/numplace/static/media/erase.a96425d0.svg",
   "static/media/eraseDisabled.svg": "/numplace/static/media/eraseDisabled.52d4ff05.svg",
   "static/media/close.svg": "/numplace/static/media/close.37f834c1.svg",
-  "static/css/main.6987896a.chunk.css.map": "/numplace/static/css/main.6987896a.chunk.css.map",
+  "static/css/main.73ebf6fa.chunk.css.map": "/numplace/static/css/main.73ebf6fa.chunk.css.map",
   "index.html": "/numplace/index.html",
-  "precache-manifest.1d7c6280799301f57c9146bf99540ef6.js": "/numplace/precache-manifest.1d7c6280799301f57c9146bf99540ef6.js",
+  "precache-manifest.bd200444d646e54d8d5ead5e1a1036ef.js": "/numplace/precache-manifest.bd200444d646e54d8d5ead5e1a1036ef.js",
   "service-worker.js": "/numplace/service-worker.js"
 }
