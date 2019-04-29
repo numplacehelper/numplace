@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "db1887c35218222bfd9f",
-    "url": "/numplace/static/css/main.73ebf6fa.chunk.css"
+    "revision": "fa7ebfad330b45f8cdd6",
+    "url": "/numplace/static/css/main.8a0b88eb.chunk.css"
   },
   {
-    "revision": "db1887c35218222bfd9f",
-    "url": "/numplace/static/js/main.db1887c3.chunk.js"
+    "revision": "fa7ebfad330b45f8cdd6",
+    "url": "/numplace/static/js/main.fa7ebfad.chunk.js"
   },
   {
     "revision": "a7834cd1f4ba2cdb1677",
@@ -68,7 +68,7 @@ self.__precacheManifest = [
     "url": "/numplace/static/media/close.37f834c1.svg"
   },
   {
-    "revision": "327b77fea21b053d2ef93fff990b4ed7",
+    "revision": "8507685c1a7257bd820edb5d17acb292",
     "url": "/numplace/index.html"
   }
 ];
