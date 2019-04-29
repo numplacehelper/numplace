@@ -35,7 +35,8 @@ class App extends Component {
       markerStatus: Config.buttonStatus.waiting,
       markerNums: Util.initMarkerNums(),
 
-      gameLevel: 10,
+      // gameLevel: 10,
+      gameLevel: 0,
       sampleGameID: null,
 
       singleNumValue: 0,
@@ -103,6 +104,7 @@ class App extends Component {
   }
 
   calcAnswer = numMatrix => {
+    // const { gameLevel, isSkipIneffective } = this.state;
     const { isSkipIneffective } = this.state;
 
     // console.log("inside calcAnswer");
@@ -119,7 +121,9 @@ class App extends Component {
       candidates: Util.initCube(Config.candidateStatus.candidate),
       exclusiveCandidates: [],
       markerNums: Util.initMarkerNums(),
-      trace: []
+      trace: [],
+      // gameLevel: gameLevel === 10 ? 0 : gameLevel
+      gameLevel: 0
     };
 
     let conditions = {
@@ -132,7 +136,11 @@ class App extends Component {
       isMarkerOff
     };
 
+    // console.log("game level: ", dataset.gameLevel);
+
     dataset = Util.setCandidates(dataset, conditions);
+
+    // console.log("game level: ", dataset.gameLevel);
 
     // There is a cell full of wide-removed //
     if (dataset === null) {
@@ -141,7 +149,10 @@ class App extends Component {
 
     dataset = Util.convertSelectable2Selected(dataset);
 
-    return dataset.numMatrix;
+    // console.log("game level: ", dataset.gameLevel);
+
+    // return dataset.numMatrix;
+    return dataset;
   };
 
   addNumNStore = cellInfo => {
@@ -841,6 +852,7 @@ class App extends Component {
         exclusiveCandidates: prevState.exclusiveCandidates,
         markerNums: prevState.markerNums,
         trace: prevState.trace
+        // gameLevel: 0
       };
 
       if (helpMode === Config.helpMode.both) {
@@ -984,6 +996,7 @@ class App extends Component {
       exclusiveCandidates: Util.deepCopy(exclusiveCandidates),
       markerNums: Util.deepCopy(markerNums),
       trace: Util.deepCopy(trace)
+      // gameLevel: 0
     };
 
     return Util.setCandidates(dataset, conditions);
@@ -1239,6 +1252,7 @@ class App extends Component {
         exclusiveCandidates: prevState.exclusiveCandidates,
         markerNums: prevState.markerNums,
         trace: prevState.trace
+        // gameLevel: 0
       };
 
       let conditions = {
@@ -1566,26 +1580,33 @@ class App extends Component {
 
     origState.lang = lang;
 
-    origState.ansMatrix = this.calcAnswer(sampleMatrix);
+    // origState.ansMatrix = this.calcAnswer(sampleMatrix);
+    const dataset = this.calcAnswer(sampleMatrix);
 
     // There is a cell full of wide-removed //
-    if (origState.ansMatrix === null) {
+    // if (origState.ansMatrix === null) {
+    if (dataset.ansMatrix === null) {
       this.setState({
         isShowMessage: true,
         message: Config.alertMessages.deadEnd
       });
-    }
+    } else {
+      origState.ansMatrix = dataset.numMatrix;
+      // const gameLevel = dataset.gameLevel;
 
-    if (origState.ansMatrix) {
+      // if (origState.ansMatrix) {
       origState.mode = Config.mode.play;
       origState.checkMode = Config.checkMode.none;
       origState.isRegisteredMatrix = Util.getRegisteredFlags(sampleMatrix);
 
-      if (Util.isAllFilled(origState.ansMatrix)) {
-        origState.gameLevel = 6;
-      } else {
-        origState.gameLevel = Config.candidateLevels.length;
-      }
+      // if (Util.isAllFilled(origState.ansMatrix)) {
+      //   origState.gameLevel = 6;
+      // } else {
+      //   origState.gameLevel = Config.candidateLevels.length;
+      // }
+      origState.gameLevel = Util.isAllFilled(origState.ansMatrix)
+        ? dataset.gameLevel
+        : Config.candidateLevels.length;
     }
 
     this.setState(origState);
@@ -1601,11 +1622,17 @@ class App extends Component {
     if (mode === Config.mode.set) {
       if (this.doCheckDuplicates() === Config.result.passed) {
         this.setState(prevState => {
-          const ansMatrix = this.calcAnswer(prevState.numMatrix);
+          // const ansMatrix = this.calcAnswer(prevState.numMatrix);
+          const dataset = this.calcAnswer(prevState.numMatrix);
+          const ansMatrix = dataset.numMatrix;
+          let gameLevel = dataset.gameLevel;
 
           if (ansMatrix) {
-            const gameLevel = Util.isAllFilled(ansMatrix)
-              ? 6
+            // const gameLevel = Util.isAllFilled(ansMatrix)
+            //   ? 6
+            //   : Config.candidateLevels.length;
+            gameLevel = Util.isAllFilled(ansMatrix)
+              ? gameLevel
               : Config.candidateLevels.length;
 
             return {

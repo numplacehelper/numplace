@@ -2350,6 +2350,7 @@ class Util {
 
     let dataset = Util.initDataset();
     dataset.numMatrix = numMatrix;
+    // dataset.gameLevel = 0;
 
     dataset = this.setCandidates(dataset, conditions);
 
@@ -2375,12 +2376,23 @@ class Util {
     const maxLoopNum =
       helpMode === Config.processTypes.singleNum ? 1 : Config.maxLoopNum;
 
+    let helperLevel = 0;
+
     if (!isSkipLevel1) {
+      helperLevel = 1;
+
       candidates = this.setCandidatesLevel1(
         candidates,
         numMatrix,
         candidateLevel
       );
+
+      if (
+        typeof dataset.gameLevel !== "undefined" &&
+        dataset.gameLevel < helperLevel
+      ) {
+        dataset.gameLevel = helperLevel;
+      }
     }
 
     // There is a cell full of wide-removed //
@@ -2398,27 +2410,215 @@ class Util {
 
     for (let loopNum = 1; loopNum <= maxLoopNum; loopNum++) {
       let exclusiveCandidateLength = exclusiveCandidates.length;
+      // let exclusiveCandidateLengthLevel6 = exclusiveCandidates.length;
 
-      dataset = this.setSelectableA(dataset, conditions);
+      for (let loopNum = 1; loopNum <= maxLoopNum; loopNum++) {
+        let exclusiveCandidateLengthLevel5 = exclusiveCandidates.length;
 
-      // There is a cell full of wide-removed //
-      if (dataset === null) {
-        return null;
-      }
+        for (let loopNum = 1; loopNum <= maxLoopNum; loopNum++) {
+          let exclusiveCandidateLengthLevel4 = exclusiveCandidates.length;
 
-      if (
-        this.isAllWideSelected(candidates) ||
-        (isStepByStep &&
-          Config.stepByStepLevels.includes(
-            Config.candidateTypes.singleCandidate
-          ) &&
-          exclusiveCandidates.length > exclusiveCandidateLength)
-      ) {
-        return dataset;
-      }
+          for (let loopNum = 1; loopNum <= maxLoopNum; loopNum++) {
+            let exclusiveCandidateLengthLevel3 = exclusiveCandidates.length;
 
-      if (processType === Config.processTypes.candidates) {
-        dataset = this.setSelectableB(dataset, conditions);
+            for (let loopNum = 1; loopNum <= maxLoopNum; loopNum++) {
+              let exclusiveCandidateLengthLevel2 = exclusiveCandidates.length;
+              helperLevel = 2;
+
+              dataset = this.setSelectableA(dataset, conditions);
+
+              // There is a cell full of wide-removed //
+              if (dataset === null) {
+                return null;
+              }
+
+              if (
+                exclusiveCandidates.length > exclusiveCandidateLengthLevel2 &&
+                typeof dataset.gameLevel !== "undefined" &&
+                dataset.gameLevel < helperLevel
+              ) {
+                dataset.gameLevel = helperLevel;
+              }
+
+              if (
+                this.isAllWideSelected(candidates) ||
+                (isStepByStep &&
+                  Config.stepByStepLevels.includes(
+                    Config.candidateTypes.singleCandidate
+                  ) &&
+                  exclusiveCandidates.length > exclusiveCandidateLength)
+              ) {
+                return dataset;
+              }
+
+              if (processType === Config.processTypes.candidates) {
+                dataset = this.setSelectableB(dataset, conditions);
+
+                // There is a cell full of wide-removed //
+                if (dataset === null) {
+                  return null;
+                }
+
+                if (
+                  exclusiveCandidates.length > exclusiveCandidateLengthLevel2 &&
+                  typeof dataset.gameLevel !== "undefined" &&
+                  dataset.gameLevel < helperLevel
+                ) {
+                  dataset.gameLevel = helperLevel;
+                }
+
+                if (
+                  this.isAllWideSelected(candidates) ||
+                  (isStepByStep &&
+                    Config.stepByStepLevels.includes(
+                      Config.candidateTypes.singleCandidate
+                    ) &&
+                    exclusiveCandidates.length > exclusiveCandidateLength)
+                ) {
+                  return dataset;
+                }
+              }
+
+              if (
+                exclusiveCandidates.length === exclusiveCandidateLengthLevel2
+              ) {
+                break;
+              }
+            }
+
+            if (
+              candidateLevel <
+              this.getLevelNumFromFunctionName(
+                Config.candidateTypes.singleExclusive
+              )
+            ) {
+              if (exclusiveCandidates.length === exclusiveCandidateLength) {
+                break;
+              }
+
+              continue;
+            }
+
+            // exclusiveCandidateLengthTmp = exclusiveCandidates.length;
+            helperLevel = 3;
+
+            dataset = this.setSingleNumExclusiveCandidates(dataset, conditions);
+
+            // There is a cell full of wide-removed //
+            if (dataset === null) {
+              return null;
+            }
+
+            if (
+              exclusiveCandidates.length > exclusiveCandidateLengthLevel3 &&
+              typeof dataset.gameLevel !== "undefined" &&
+              dataset.gameLevel < helperLevel
+            ) {
+              dataset.gameLevel = helperLevel;
+            }
+
+            if (
+              this.isAllWideSelected(candidates) ||
+              (isStepByStep &&
+                Config.stepByStepLevels.includes(
+                  Config.candidateLevelTypes.level3
+                ) &&
+                exclusiveCandidates.length > exclusiveCandidateLength)
+            ) {
+              return dataset;
+            }
+
+            if (exclusiveCandidates.length === exclusiveCandidateLengthLevel3) {
+              break;
+            }
+          }
+
+          if (
+            candidateLevel <
+            this.getLevelNumFromFunctionName(
+              Config.candidateTypes.multipleExclusive
+            )
+          ) {
+            if (exclusiveCandidates.length === exclusiveCandidateLength) {
+              break;
+            }
+            continue;
+          }
+
+          // exclusiveCandidateLengthTmp = exclusiveCandidates.length;
+          helperLevel = 4;
+
+          dataset = this.setExclusiveUnionA(dataset, conditions);
+
+          // There is a cell full of wide-removed //
+          if (dataset === null) {
+            return null;
+          }
+
+          if (
+            exclusiveCandidates.length > exclusiveCandidateLengthLevel4 &&
+            typeof dataset.gameLevel !== "undefined" &&
+            dataset.gameLevel < helperLevel
+          ) {
+            dataset.gameLevel = helperLevel;
+          }
+
+          if (
+            this.isAllWideSelected(candidates) ||
+            (isStepByStep &&
+              Config.stepByStepLevels.includes(
+                Config.candidateLevelTypes.level3
+              ) &&
+              exclusiveCandidates.length > exclusiveCandidateLength)
+          ) {
+            return dataset;
+          }
+
+          dataset = this.setExclusiveUnionB(dataset, conditions);
+
+          // There is a cell full of wide-removed //
+          if (dataset === null) {
+            return null;
+          }
+
+          if (
+            exclusiveCandidates.length > exclusiveCandidateLengthLevel4 &&
+            typeof dataset.gameLevel !== "undefined" &&
+            dataset.gameLevel < helperLevel
+          ) {
+            dataset.gameLevel = helperLevel;
+          }
+
+          if (
+            this.isAllWideSelected(candidates) ||
+            (isStepByStep &&
+              Config.stepByStepLevels.includes(
+                Config.candidateLevelTypes.level4
+              ) &&
+              exclusiveCandidates.length > exclusiveCandidateLength)
+          ) {
+            return dataset;
+          }
+
+          if (exclusiveCandidates.length === exclusiveCandidateLengthLevel4) {
+            break;
+          }
+        }
+
+        if (
+          candidateLevel <
+          this.getLevelNumFromFunctionName(Config.candidateTypes.square)
+        ) {
+          if (exclusiveCandidates.length === exclusiveCandidateLength) {
+            break;
+          }
+          continue;
+        }
+
+        // exclusiveCandidateLengthTmp = exclusiveCandidates.length;
+        helperLevel = 5;
+
+        dataset = this.setSquareCandidates(dataset, conditions);
 
         // There is a cell full of wide-removed //
         if (dataset === null) {
@@ -2426,112 +2626,27 @@ class Util {
         }
 
         if (
+          exclusiveCandidates.length > exclusiveCandidateLengthLevel5 &&
+          typeof dataset.gameLevel !== "undefined" &&
+          dataset.gameLevel < helperLevel
+        ) {
+          dataset.gameLevel = helperLevel;
+        }
+
+        if (
           this.isAllWideSelected(candidates) ||
           (isStepByStep &&
             Config.stepByStepLevels.includes(
-              Config.candidateTypes.singleCandidate
+              Config.candidateLevelTypes.level5
             ) &&
             exclusiveCandidates.length > exclusiveCandidateLength)
         ) {
           return dataset;
         }
-      }
 
-      if (
-        candidateLevel <
-        this.getLevelNumFromFunctionName(Config.candidateTypes.singleExclusive)
-      ) {
-        if (exclusiveCandidates.length === exclusiveCandidateLength) {
+        if (exclusiveCandidates.length === exclusiveCandidateLengthLevel5) {
           break;
         }
-
-        continue;
-      }
-
-      dataset = this.setSingleNumExclusiveCandidates(dataset, conditions);
-
-      // There is a cell full of wide-removed //
-      if (dataset === null) {
-        return null;
-      }
-
-      if (
-        this.isAllWideSelected(candidates) ||
-        (isStepByStep &&
-          Config.stepByStepLevels.includes(Config.candidateLevelTypes.level3) &&
-          exclusiveCandidates.length > exclusiveCandidateLength)
-      ) {
-        return dataset;
-      }
-
-      if (
-        candidateLevel <
-        this.getLevelNumFromFunctionName(
-          Config.candidateTypes.multipleExclusive
-        )
-      ) {
-        if (exclusiveCandidates.length === exclusiveCandidateLength) {
-          break;
-        }
-        continue;
-      }
-
-      dataset = this.setExclusiveUnionA(dataset, conditions);
-
-      // There is a cell full of wide-removed //
-      if (dataset === null) {
-        return null;
-      }
-
-      if (
-        this.isAllWideSelected(candidates) ||
-        (isStepByStep &&
-          Config.stepByStepLevels.includes(Config.candidateLevelTypes.level3) &&
-          exclusiveCandidates.length > exclusiveCandidateLength)
-      ) {
-        return dataset;
-      }
-
-      dataset = this.setExclusiveUnionB(dataset, conditions);
-
-      // There is a cell full of wide-removed //
-      if (dataset === null) {
-        return null;
-      }
-
-      if (
-        this.isAllWideSelected(candidates) ||
-        (isStepByStep &&
-          Config.stepByStepLevels.includes(Config.candidateLevelTypes.level4) &&
-          exclusiveCandidates.length > exclusiveCandidateLength)
-      ) {
-        return dataset;
-      }
-
-      if (
-        candidateLevel <
-        this.getLevelNumFromFunctionName(Config.candidateTypes.square)
-      ) {
-        if (exclusiveCandidates.length === exclusiveCandidateLength) {
-          break;
-        }
-        continue;
-      }
-
-      dataset = this.setSquareCandidates(dataset, conditions);
-
-      // There is a cell full of wide-removed //
-      if (dataset === null) {
-        return null;
-      }
-
-      if (
-        this.isAllWideSelected(candidates) ||
-        (isStepByStep &&
-          Config.stepByStepLevels.includes(Config.candidateLevelTypes.level5) &&
-          exclusiveCandidates.length > exclusiveCandidateLength)
-      ) {
-        return dataset;
       }
 
       if (
@@ -2544,7 +2659,18 @@ class Util {
         continue;
       }
 
+      // exclusiveCandidateLengthTmp = exclusiveCandidates.length;
+      helperLevel = 6;
+
       dataset = this.setAssumptionTest(dataset, conditions);
+
+      if (
+        exclusiveCandidates.length > exclusiveCandidateLength &&
+        typeof dataset.gameLevel !== "undefined" &&
+        dataset.gameLevel < helperLevel
+      ) {
+        dataset.gameLevel = helperLevel;
+      }
 
       if (
         this.isAllWideSelected(candidates) ||
