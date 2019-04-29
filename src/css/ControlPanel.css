@@ -2,6 +2,18 @@
   --container-height: 640px;
   --controlButtonHeight: 36px;
   --controlPanelTitleHeight: 36px;
+
+  /* --num0-color: black;
+  --num1-color: brown;
+  --num2-color: crimson;
+  --num3-color: violet;
+  --num4-color: goldenRod;
+  --num5-color: yellowgreen;
+  --num6-color: teal;
+  --num7-color: darkSlateGray;
+  --num8-color: blue;
+  --num9-color: navy;
+  --num10-color: gray; */
 }
 
 #controlPanel {
@@ -204,10 +216,10 @@
 #indicator {
   height: 10px;
   width: 10px;
-  background-color: #bbb;
+  /* background-color: #bbb; */
   border-radius: 50%;
   display: inline-block;
-  background: blue;
+  /* background: blue; */
 }
 
 #indicatorWrapper {
@@ -219,3 +231,47 @@
   justify-content: space-around; */
   background: lightgray;
 }
+
+/* .indicator0 {
+  background: var(--num0-color);
+}
+
+.indicator1 {
+  background: var(--num1-color);
+}
+
+.indicator2 {
+  background: var(--num2-color);
+}
+
+.indicator3 {
+  background: var(--num3-color);
+}
+
+.indicator4 {
+  background: var(--num4-color);
+}
+
+.indicator5 {
+  background: var(--num5-color);
+}
+
+#indicator.indicator6 {
+  background: var(--num6-color);
+}
+
+.indicator7 {
+  background: var(--num7-color);
+}
+
+.indicator8 {
+  background: var(--num8-color);
+}
+
+.indicator9 {
+  background: var(--num9-color);
+}
+
+.indicator10 {
+  background: var(--num10-color);
+} */

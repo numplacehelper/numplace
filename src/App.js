@@ -35,7 +35,8 @@ class App extends Component {
       markerStatus: Config.buttonStatus.waiting,
       markerNums: Util.initMarkerNums(),
 
-      gameLevel: null,
+      gameLevel: 10,
+      sampleGameID: null,
 
       singleNumValue: 0,
       multipleNums: [],
@@ -1561,7 +1562,7 @@ class App extends Component {
     const id = Config.buttonIds.sampleGame + Util.capitalize(sampleLevel);
 
     origState.numMatrix = sampleMatrix;
-    origState.gameLevel = sampleLevel;
+    origState.sampleGameID = sampleLevel;
 
     origState.lang = lang;
 
@@ -1579,6 +1580,12 @@ class App extends Component {
       origState.mode = Config.mode.play;
       origState.checkMode = Config.checkMode.none;
       origState.isRegisteredMatrix = Util.getRegisteredFlags(sampleMatrix);
+
+      if (Util.isAllFilled(origState.ansMatrix)) {
+        origState.gameLevel = 6;
+      } else {
+        origState.gameLevel = Config.candidateLevels.length;
+      }
     }
 
     this.setState(origState);
@@ -1597,12 +1604,17 @@ class App extends Component {
           const ansMatrix = this.calcAnswer(prevState.numMatrix);
 
           if (ansMatrix) {
+            const gameLevel = Util.isAllFilled(ansMatrix)
+              ? 6
+              : Config.candidateLevels.length;
+
             return {
               mode: Config.mode.play,
               helpMode: Config.helpMode.none,
               checkMode: Config.checkMode.none,
               singleNumValue: 0,
-              ansMatrix
+              ansMatrix,
+              gameLevel
             };
           } else {
             return {
@@ -1641,7 +1653,7 @@ class App extends Component {
   };
 
   handleRestart = () => {
-    const { lang, numMatrix, isRegisteredMatrix, gameLevel } = this.state;
+    const { lang, numMatrix, isRegisteredMatrix, sampleGameID } = this.state;
     const origState = this.getInitialState();
 
     // console.log("inside handleRestart");
@@ -1652,7 +1664,7 @@ class App extends Component {
 
     origState.numMatrix = Util.resetNumMatrix(numMatrix, isRegisteredMatrix);
     origState.isRegisteredMatrix = isRegisteredMatrix;
-    origState.gameLevel = gameLevel;
+    origState.sampleGameID = sampleGameID;
 
     this.setState(origState);
 

@@ -5,7 +5,7 @@ import Config from "../../Config";
 
 class SampleGames extends Component {
   render() {
-    const { lang, gameLevel, handleSampleGames } = this.props;
+    const { lang, sampleGameID, handleSampleGames } = this.props;
 
     // console.log("inside SampleGames");
 
@@ -21,7 +21,7 @@ class SampleGames extends Component {
 
         const buttonTitle = Util.getSampleGameButtonLabel(level, i);
 
-        if (gameLevel === buttonId) {
+        if (sampleGameID === buttonId) {
           btnClsName = [btnClsName, Config.buttonStatus.active].join(" ");
         }
 

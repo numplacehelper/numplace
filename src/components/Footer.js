@@ -9,9 +9,9 @@ import "../App.css";
 
 class Footer extends Component {
   render() {
-    const { lang, gameLevel } = this.props;
+    const { lang, sampleGameID } = this.props;
 
-    const gameInfo = Util.getSampleGameInfo(gameLevel);
+    const gameInfo = Util.getSampleGameInfo(sampleGameID);
 
     let credit = "";
     if (gameInfo) {
