@@ -1682,7 +1682,13 @@ class App extends Component {
   };
 
   handleRestart = () => {
-    const { lang, numMatrix, isRegisteredMatrix, sampleGameID } = this.state;
+    const {
+      lang,
+      numMatrix,
+      isRegisteredMatrix,
+      sampleGameID,
+      gameLevel
+    } = this.state;
     const origState = this.getInitialState();
 
     // console.log("inside handleRestart");
@@ -1694,6 +1700,8 @@ class App extends Component {
     origState.numMatrix = Util.resetNumMatrix(numMatrix, isRegisteredMatrix);
     origState.isRegisteredMatrix = isRegisteredMatrix;
     origState.sampleGameID = sampleGameID;
+    origState.gameLevel = gameLevel;
+    origState.numCounts = Util.countNumbers(origState.numMatrix);
 
     this.setState(origState);
 
