@@ -8,6 +8,7 @@ import SingleNum from "./SingleNum";
 import MultipleNums from "./MultipleNums";
 import CandidateLevels from "./CandidatesLevels";
 import Controls from "./Controls";
+import NumCounter from "./NumCounter";
 
 class HelpModePane extends Component {
   render() {
@@ -37,6 +38,7 @@ class HelpModePane extends Component {
         </div>
         <HelpModeButtons {...this.props} />
         {numPanel}
+        <NumCounter {...this.props} />
         <CandidateLevels {...this.props} />
         <Controls {...this.props} />
       </div>

@@ -1607,6 +1607,8 @@ class App extends Component {
       origState.gameLevel = Util.isAllFilled(origState.ansMatrix)
         ? dataset.gameLevel
         : Config.candidateLevels.length;
+
+      origState.numCounts = Util.countNumbers(sampleMatrix);
     }
 
     this.setState(origState);

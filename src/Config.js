@@ -255,6 +255,10 @@ class Config {
     indicatorWrapper: "indicatorWrapper",
     indicator: "indicator",
 
+    numCounterWrapper: "numCounterWrapper",
+    numCounter: "numCounter",
+    numCounterBar: "numCounterBar",
+
     // Number Panel //
     delete: "delete",
     cancel: "cancel"
@@ -304,6 +308,10 @@ class Config {
     marker: "controlButton",
     lang: "controlButton",
     help: "controlButton",
+
+    indicator: "indicator",
+    numCounter: "numCounter",
+    numCounterBar: "numCounterBar",
 
     // Number Panel //
     delete: "controlButton",

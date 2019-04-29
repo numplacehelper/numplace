@@ -89,7 +89,8 @@
 #singleNumWrapper {
   padding: 3px 5px;
   border-color: black;
-  border-width: 1px 0;
+  /* border-width: 1px 0; */
+  border-width: 1px 0 0 0;
   border-style: solid;
 }
 
@@ -159,10 +160,10 @@
   padding: 3px 0;
 }
 
-#multipleNums .allDone,
+/* #multipleNums .allDone,
 #singleNumWrapper .allDone {
   background: gray;
-}
+} */
 
 #multipleNums .exceeding,
 #singleNumWrapper .exceeding {
@@ -275,3 +276,30 @@
 .indicator10 {
   background: var(--num10-color);
 } */
+
+#numCounterWrapper {
+  /* width: 200px; */
+  padding: 0 5px 5px 5px;
+
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  /* background: red; */
+  /* justify-content: end; */
+
+  box-sizing: border-box;
+  border-color: black;
+  /* border-width: 1px 0; */
+  border-width: 0 0 1px 0;
+  border-style: solid;
+}
+
+/* .counterNumWrapper {
+} */
+
+.numCounterBar {
+  box-sizing: border-box;
+  width: 100%;
+  height: 5px;
+  border: 1px solid lightgray;
+}

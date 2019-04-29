@@ -14,7 +14,8 @@ class SingleNum extends Component {
 
       let labelDivClassName = Config.panelClassNames.cellNum + num;
       if (numCounts[num] === Config.size) {
-        labelDivClassName = Util.appendNum(Config.panelClassNames.cellNum, 0);
+        // labelDivClassName = Util.appendNum(Config.panelClassNames.cellNum, 0);
+        labelDivClassName = Util.appendNum(Config.panelClassNames.cellNum, 10);
       }
 
       let disabled = null;
