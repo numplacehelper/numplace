@@ -251,6 +251,10 @@ class Config {
     lang: "lang",
     help: "help",
 
+    helperLableWrapper: "helperLableWrapper",
+    indicatorWrapper: "indicatorWrapper",
+    indicator: "indicator",
+
     // Number Panel //
     delete: "delete",
     cancel: "cancel"

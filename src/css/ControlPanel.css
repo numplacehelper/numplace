@@ -193,3 +193,29 @@
   margin: 0;
   border-radius: 0;
 }
+
+#helperLableWrapper {
+  display: grid;
+  grid-template-columns: 8fr 1fr;
+
+  margin: 4px 5px;
+}
+
+#indicator {
+  height: 10px;
+  width: 10px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  background: blue;
+}
+
+#indicatorWrapper {
+  /* width: 50px; */
+  width: 20px;
+  border-radius: 5px;
+  padding: 5px;
+  /* display: flex;
+  justify-content: space-around; */
+  background: lightgray;
+}

@@ -9,6 +9,7 @@ import HelpModePane from "./helpMode/HelpModePane";
 import MarkerButton from "./MarkerButton";
 import LangButton from "./LangButton";
 import HelpButton from "./HelpButton";
+import Indicator from "./Indicator";
 
 import Config from "../../Config";
 
@@ -23,7 +24,11 @@ class HelperlPanel extends Component {
         id={Config.panelIds.helper}
         className={Config.panelClassNames.helper}
       >
-        <h2>{Config.panelTitles.helper[lang]}</h2>
+        <div id={Config.buttonIds.helperLableWrapper}>
+          <h2>{Config.panelTitles.helper[lang]}</h2>
+          <Indicator {...this.props} />
+        </div>
+
         <Check {...this.props} />
         <HelpModePane {...this.props} />
         <MarkerButton {...this.props} />
