@@ -1360,7 +1360,8 @@ class App extends Component {
         exclusiveCandidates: dataset.exclusiveCandidates,
         markerNums: dataset.markerNums,
         trace: dataset.trace,
-        duplicates
+        duplicates,
+        numCounts: Util.countNumbers(dataset.numMatrix)
       };
     });
   };
