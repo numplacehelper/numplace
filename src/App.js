@@ -109,7 +109,7 @@ class App extends Component {
 
     // console.log("inside calcAnswer");
 
-    const candidateLevel = Config.candidateLevelTypesArray.length - 1;
+    // const candidateLevel = Config.candidateLevelTypesArray.length - 1;
     const helpMode = Config.helpMode.candidates;
     const isStepByStep = false;
     const isSkipLevel1 = false;
@@ -127,7 +127,7 @@ class App extends Component {
     };
 
     let conditions = {
-      candidateLevel,
+      // candidateLevel,
       helpMode,
       singleNumValue,
       isStepByStep,
@@ -138,16 +138,29 @@ class App extends Component {
 
     // console.log("game level: ", dataset.gameLevel);
 
-    dataset = Util.setCandidates(dataset, conditions);
+    for (
+      let candidateLevel = 2;
+      candidateLevel < Config.candidateLevelTypesArray.length;
+      candidateLevel++
+    ) {
+      conditions.candidateLevel = candidateLevel;
 
-    // console.log("game level: ", dataset.gameLevel);
+      dataset = Util.setCandidates(dataset, conditions);
 
-    // There is a cell full of wide-removed //
-    if (dataset === null) {
-      return null;
+      // console.log("game level: ", dataset.gameLevel);
+
+      // There is a cell full of wide-removed //
+      if (dataset === null) {
+        return null;
+      }
+
+      dataset = Util.convertSelectable2Selected(dataset);
+
+      if (Util.isAllFilled(dataset.numMatrix)) {
+        dataset.gameLevel = candidateLevel;
+        break;
+      }
     }
-
-    dataset = Util.convertSelectable2Selected(dataset);
 
     // console.log("game level: ", dataset.gameLevel);
 
