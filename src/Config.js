@@ -667,7 +667,7 @@ class Config {
     }
   };
 
-  static constrolIconCaptions = {
+  static controlIconCaptions = {
     reset: {
       en: "Reset",
       ja: "これまでの操作を無効にする"

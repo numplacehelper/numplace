@@ -106,8 +106,8 @@ class Controls extends Component {
       <img
         src={symbol}
         style={iconStyles[controlType]}
-        alt={Config.constrolIconCaptions[controlType][lang]}
-        title={Config.constrolIconCaptions[controlType][lang]}
+        alt={Config.controlIconCaptions[controlType][lang]}
+        title={Config.controlIconCaptions[controlType][lang]}
       />
     );
 
